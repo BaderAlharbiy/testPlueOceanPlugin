@@ -26,7 +26,14 @@ pipeline {
 
     stage('Deloy ') {
       steps {
+        input(message: 'Are you sure to deply', ok: 'Yes. ')
         echo 'Deplyemet stges'
+      }
+    }
+
+    stage('Notfiy your built') {
+      steps {
+        echo 'New build completed succ'
       }
     }
 
